@@ -98,6 +98,39 @@ export type Database = {
         }
         Relationships: []
       }
+      match_events: {
+        Row: {
+          created_at: string | null
+          id: string
+          match_id: string
+          minute: number
+          player: string
+          position: string | null
+          team: string
+          type: string
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          match_id: string
+          minute: number
+          player: string
+          position?: string | null
+          team: string
+          type: string
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          match_id?: string
+          minute?: number
+          player?: string
+          position?: string | null
+          team?: string
+          type?: string
+        }
+        Relationships: []
+      }
       match_history: {
         Row: {
           created_at: string | null
@@ -158,6 +191,54 @@ export type Database = {
           kind?: string
           message_id?: string | null
           owner_id?: string
+        }
+        Relationships: []
+      }
+      milestone_history: {
+        Row: {
+          claimed_at: string | null
+          id: string
+          milestone: number
+          owner_id: string
+          season_id: string | null
+        }
+        Insert: {
+          claimed_at?: string | null
+          id?: string
+          milestone: number
+          owner_id: string
+          season_id?: string | null
+        }
+        Update: {
+          claimed_at?: string | null
+          id?: string
+          milestone?: number
+          owner_id?: string
+          season_id?: string | null
+        }
+        Relationships: []
+      }
+      milestone_pending_increments: {
+        Row: {
+          created_at: string | null
+          id: string
+          pending_amount: number
+          player_id: string
+          reason: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          pending_amount?: number
+          player_id: string
+          reason?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          pending_amount?: number
+          player_id?: string
+          reason?: string | null
         }
         Relationships: []
       }
