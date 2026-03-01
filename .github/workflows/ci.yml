@@ -16,7 +16,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm install --no-audit --no-fund
-      - run: npx eslint src/ --ext .ts
+      - run: npx eslint src/ --ext .ts --max-warnings 20
       - run: npx vitest run
       - run: npx tsc --noEmit
 
