@@ -1,3 +1,13 @@
+# IMPORTANT: Environment variables & secrets (NEVER commit these)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+.secrets/
+*.pem
+*.key
+
 # Logs
 logs
 *.log
