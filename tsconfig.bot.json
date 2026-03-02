@@ -1,0 +1,44 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": true
+  },
+  "include": [
+    "src/bot/**/*.ts",
+    "src/commands/**/*.ts",
+    "src/services/**/*.ts",
+    "src/models/**/*.ts",
+    "src/match/**/*.ts",
+    "src/types/**/*.ts",
+    "src/config/**/*.ts",
+    "src/utils/**/*.ts",
+    "src/database/**/*.ts",
+    "src/bot-entry.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.tsx",
+    "src/pages/**",
+    "src/components/**",
+    "src/hooks/**",
+    "src/integrations/**",
+    "src/lib/**",
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/test/**"
+  ]
+}

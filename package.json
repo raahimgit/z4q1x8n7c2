@@ -5,14 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:bot": "tsx src/bot-entry.ts",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:bot": "tsc -p tsconfig.bot.json",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "start:bot": "npx tsx src/bot-entry.ts",
-    "start:bot:prod": "node dist/bot-entry.js"
+    "start": "node dist/bot-entry.js",
+    "start:bot": "npm run build:bot && npm start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
